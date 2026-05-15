@@ -14,4 +14,30 @@ export default function Home() {
       </div>
     </main>
   )
+}"use client";
+
+import { useRouter } from "next/navigation";
+
+export default function Home() {
+
+const router = useRouter();
+
+return (
+
+<div>
+
+<h1>Dil Se Dating</h1>
+
+<button
+onClick={() => router.push("/login")}
+
+
+Shuru Karein
+
+</button>
+
+</div>
+
+);
+
 }

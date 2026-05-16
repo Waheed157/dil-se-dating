@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { db, auth } from './firebase';
+import { db } from './firebase.js';
 import { collection, getDocs } from 'firebase/firestore';
 
 export default function Home() {
@@ -25,17 +25,6 @@ export default function Home() {
       <h1>Dil Se Dating</h1>
       <p>App is working!</p>
       
-      {data.length > 0 ? (
-        <ul>
-          {data.map(item => (
-            <li key={item.id}>{JSON.stringify(item)}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </main>
-  );
-}
+      {data.length > 0 ?
 doc.id
 doc.id

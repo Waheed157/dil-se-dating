@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 export default function Home() {
   return (
     <main>
       <h1>Dil Se Dating ❤️</h1>
       <p>Jahan Dil Milte Hain</p>
-=======
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -41,7 +39,6 @@ export default function Home() {
       ) : (
         <p>Loading...</p>
       )}
->>>>>>> 5a30f812f95cd19a006ccd842cff1ecb5cea1bdc
     </main>
   );
 }

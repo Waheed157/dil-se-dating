@@ -1,8 +1,3 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>Dil Se Dating ❤️</h1>
-      <p>Jahan Dil Milte Hain</p>
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -15,30 +10,19 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, 'users'));
-        const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setData(items);
+        const querySnapshot = await getDocs(collection(db, "your_collection"));
+        setData(querySnapshot.docs.map(doc => doc.data()));
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error(error);
       }
     };
     fetchData();
   }, []);
 
   return (
-    <main style={{ padding: '20px' }}>
-      <h1>Dil Se Dating</h1>
-      <p>App is working!</p>
-      
-      {data.length > 0 ? (
-        <ul>
-          {data.map(item => (
-            <li key={item.id}>{JSON.stringify(item)}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <main>
+      <h1>Dil Se Dating ❤️</h1>
+      <p>Jahan Dil Milte Hain</p>
     </main>
   );
 }
